@@ -1,0 +1,14 @@
+auth.json
+__pycache__/
+.idea/
+.vscode/
+
+.cache-NSTHE1
+*.pdf
+
+words.txt
+remaining_words.txt
+
+artists/
+moods/
+songs/
