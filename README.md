@@ -28,11 +28,17 @@ $pip install spotipy
 $pip install flask
 ```
 Create three subdirectories:
+
 artists/
+
 moods/
+
 songs/
+
 (JSON files will be stored there)
+
 (Alternatively, using a JSON object based database such as MongoDB or Firebase would be better)
+
 Optional:
 Pre-compute song lists for common moods
 ```
