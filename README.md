@@ -39,6 +39,16 @@ songs/
 
 (Alternatively, using a JSON object based database such as MongoDB or Firebase would be better)
 
+Register an API key for Spotify and create 'auth.json'
+```
+{
+  'username' : 
+  'id' : 
+  'secret' :
+  'redirect' : 
+}
+```
+
 Optional:
 Pre-compute song lists for common moods
 ```
