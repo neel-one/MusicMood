@@ -1,30 +1,34 @@
 # Mood-based Music Recommendations using Spotify crowdsourcing and ranking
 
-** Table of Contents **
+**Table of Contents**
 1. App
 2. Usage
 
-** App **
+**App**
 
 
 
-** Usage **
+**Usage**
 
 Clone the repository
-'$git clone https://github.com/neel-one/MusicMood.git '
+```$git clone https://github.com/neel-one/MusicMood.git```
 Install necessary packages
-'$pip install spotipy'
-'$pip install flask'
+```
+$pip install spotipy
+$pip install flask
+```
 
 Optional:
 Pre-compute song lists for common moods
-'$python driver.py'
-'word\_list.txt'
+```
+$python driver.py
+$word\_list.txt'
+```
 
 Set up flask
-'$export FLASK\_ENV=app.py'
+```$export FLASK\_ENV=app.py```
 
 Run the program!
-'$flask run'
+```$flask run```
 
 Go to your favorite port to see the app (don't use this for production!')
