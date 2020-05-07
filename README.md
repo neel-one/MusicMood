@@ -1,4 +1,4 @@
-# Mood-based Music Recommendations using Spotify crowdsourcing and ranking
+# Mood-based Music Recommendations using crowdsourcing and ranking
 
 **Table of Contents**
 1. App
@@ -24,13 +24,17 @@ Optional:
 Pre-compute song lists for common moods
 ```
 $python driver.py
-$word\_list.txt'
+$word_list.txt
 ```
 
 Set up flask
-```$export FLASK\_ENV=app.py```
+```
+$export FLASK_ENV=app.py
+```
 
 Run the program!
-```$flask run```
+```
+$flask run
+```
 
-Go to your favorite port to see the app (don't use this for production!')
+Go to your favorite port to see the app (don't use this for production!)
