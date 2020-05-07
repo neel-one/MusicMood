@@ -2,12 +2,13 @@ auth.json
 __pycache__/
 .idea/
 .vscode/
-
+.ipynb_checkpoints/
 .cache-NSTHE1
 *.pdf
-
+.DS_store
 words.txt
 remaining_words.txt
+*.pyc
 
 artists/
 moods/

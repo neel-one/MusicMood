@@ -56,7 +56,8 @@ class SongList:
         for _ in range(0, self.num_playlists):
             if(self.DEBUG):
                 random.seed(10)
-            self.rand.append(random.randrange(0, self.num_playlists))
+            #self.rand.append(random.randrange(0, self.num_playlists))
+            self.rand.append(random.randrange(0, 50))
 
     def search(self):
         if(self.sp is None):
@@ -64,14 +65,16 @@ class SongList:
             return
         
         
-        query = self.sp.search(self.mood, type='playlist', limit=self.num_playlists)
-        
+        #query = self.sp.search(self.mood, type='playlist', limit=self.num_playlists)
+        query = self.sp.search(self.mood,type='playlist',limit=50)
+        #playlist_samples = random.sample(query['playlists']['items'], self.num_playlists)
 
-        self.num_playlists = len(query['playlists']['items'])
+        #self.num_playlists = len(query['playlists']['items'])
         self.genRand()
 
         for i in range(0, self.num_playlists):
             self.playlist_ids.append(query['playlists']['items'][self.rand[i]]['id'])
+    
         
         for i in range(0, len(self.playlist_ids)):
             #get playlists tracks --> class Rank, with artist data
@@ -117,10 +120,12 @@ class Artist:
         self.id = _id
         #self.loaded = False
         if os.path.exists("artists/" + self.id + ".json"):
+            print("Loading artist from file")
             with open('artists/' + self.id + '.json') as f:
                 self.data = json.load(f)
             #self.loaded = True
         else:
+            print("Creating new artist")
             self.data = dict()
             self.data['class'] = 'Artist'
             self.data['name'] = name
@@ -146,11 +151,13 @@ class Rank:
         self.artist = Artist
 
         if os.path.exists("songs/" + self.id + ".json"):
+            print("Loading song from file")
             with open('songs/' + self.id + '.json') as f:
                 self.data = json.load(f)
                 self.rank = self.data['rank']
 
         else:
+            print("Creating new song")
             self.data = dict()
             self.data['class'] = 'Song'
             self.data['name'] = self.name

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title> Mood-based Music Recommendations </title>
+    <link rel = 'stylesheet' href='/static/style.css'>
+</head>
+<div id='bar'>
+        <ul>
+            <li><a href="/"> Song Reccomendations </a></li>
+            <li><a href="/rank"> Rank a Song</a></li>
+            <li><a href="/how"> How It Works</a></li>
+        </ul>
+</div>
+<body>
+        <h1> Rank a song! </h1>
+        <p>
+            Each song has a score which is generally in the range [-1, 1].
+            <br>
+            However, the score can reach as high as 100 (very unlikely)!
+            <br>
+            The higher the value, the better the a song is ranked (based on the current algorithm, which is 
+            unfortunately biased to less popular artists)
+        </p>
+        <p>
+            Enter a song:
+            <form method='POST'>
+                <div style="width:300px; margin:auto;">
+                    <input name="song" type="text" placeholder="Bohemian Rhapsody" required> 
+                </div>
+                <input type = "submit">
+            </form>
+        </p>
+     
+           
+        <div>
+            <p>
+                {% if score %}
+                <strong> Score for {{ song }}</strong>
+                <!-- Somehow the CSS isn't working in style.css-->
+                <div style="font-size:30px;box-sizing:border-box; border:2px solid dodgerblue;text-align:center;padding:50px;  ">
+                    {{ score }}
+                </div>
+                {% endif %}
+    
+            </p>
+        </div>
+        
+        
+    </body>
+    
+    
+    </html>

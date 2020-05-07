@@ -109,7 +109,6 @@ dishonored
 disreputable
 embarrassed
 guilty
-hateful
 humbled
 humiliated
 improper

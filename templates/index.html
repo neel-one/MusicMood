@@ -1,0 +1,58 @@
+
+<html>
+
+<head>
+    <title> Mood-based Music Recommendations </title>
+    <link rel = 'stylesheet' href='/static/style.css'>
+    <script src='/static/autocomplete.js'> </script>
+</head>
+<div id='bar'>
+        <ul>
+            <li><a href="/"> Song Reccomendations </a></li>
+            <li><a href="/rank"> Rank a Song</a></li>
+            <li><a href="/how"> How It Works</a></li>
+        </ul>
+</div>
+<body>
+    <h1> Recommend me a song! </h1>
+    <p>
+        Select the <b> word, emotion, mood, or vibe </b> which best describes your current feelings
+        <form autocomplete="off" method='POST'>
+            <div class='autocomplete' style="width:300px;">
+                <input name="mood" type="text" id="search" placeholder="happy" required> 
+            </div>
+            <div>
+                Optional: How many times have you previously selected this word (so we don't give you a song again)
+                <input name="num" type="number" min="0" max="19" value="0" >
+            </div>
+            <input type = "submit">
+        </form>
+        <script>
+                autocomplete(document.getElementById("search"), words);
+        </script>
+    </p>
+ 
+       
+    <div>
+        <p>
+            {% if song_list %}
+            <strong> Recommended songs based on your mood - {{mood}}</strong>
+            <!-- Somehow the CSS isn't working in style.css-->
+            <div style="font-size:30px;box-sizing:border-box; border:2px solid dodgerblue;text-align:center;padding:50px;  ">
+                {% for i in song_list %}
+                    <li> {{ i }} </li>
+                    <br>
+                    <li> ----------------</li>
+                    <br>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+        </p>
+    </div>
+    
+    
+</body>
+
+
+</html>

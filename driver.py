@@ -30,6 +30,7 @@ def getSongList(mood, word_set, new_list = False):
     mood = mood.lower()
     assert(mood in word_set)
     if not new_list and mood in word_set:
+        print('Loading existing song list')
         with open('moods/' + mood + '.json') as f:
             sl = json.load(f)
             return sl
@@ -68,14 +69,18 @@ def getSongs(mood, start_index = 0, num_songs = 5, word_set = word_set('word_lis
     #Bad place to remove duplicates.... 
     #sl = getSongList(mood, word_set)
     #sl.sort(reverse = True, key = lambda x : x[1])
+    songs = []
     sl = getSongList(mood, word_set)
     sl = remove_duplicates(sl)
     end = start_index + num_songs
     while(start_index < end):
         if start_index >= len(sl):
             break
+        songs.append(sl[start_index][0])
         print(sl[start_index][0])
         start_index += 1
+    return songs
+
 
 def RankSong(song, sp = Spotify('auth.json').sp):
     q = sp.search(song, type='track')
@@ -83,7 +88,7 @@ def RankSong(song, sp = Spotify('auth.json').sp):
     artist = Artist(q['artists'][0]['id'], q['artists'][0]['name'], sp)
     rank = Rank(q['id'], q['name'], artist, sp)
     return rank.score()
-    
+
 def fix_moods():
     #Rename initally named files with '?' suffix
     os.chdir('moods/')
