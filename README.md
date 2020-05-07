@@ -5,7 +5,14 @@
 2. Usage
 
 **App**
-
+Home Page
+![](static/home_page.png)
+Results for 'agitated'
+![](static/rec_ex.png)
+Example of scoring the song 'Electricity'
+![](static/rank_ex.png)
+Page showing a basic overview of how recommendations work
+![](static/flow_page.png)
 
 
 **Usage**
