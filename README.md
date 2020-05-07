@@ -11,8 +11,10 @@
 **Usage**
 
 Clone the repository
-```$git clone https://github.com/neel-one/MusicMood.git```
-Install necessary packages
+```
+$git clone https://github.com/neel-one/MusicMood.git
+```
+Install the necessary packages
 ```
 $pip install spotipy
 $pip install flask
