@@ -23,9 +23,9 @@ def word_list(in_file):
 
 class Spotify:
     def __init__(self, auth):
-        username = 'NSTHE1'
         with open(auth) as f:
             data = json.load(f)
+            username = data['username']
             id = data['id']
             secret = data['secret']
             uri = data['redirect']
