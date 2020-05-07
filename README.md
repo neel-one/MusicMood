@@ -6,6 +6,8 @@
 
 **App**
 
+Problem statement: it is very difficult to get music recommendations as classic algorithms (i.e. YouTube recs/Spotify 'for you') are biased toward your previous listening history and don't provide a way to appreciate a wider breadth of music.
+
 Home Page
 ![](static/home_page.png)
 Results for 'agitated'
