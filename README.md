@@ -5,6 +5,7 @@
 2. Usage
 
 **App**
+
 Home Page
 ![](static/home_page.png)
 Results for 'agitated'
