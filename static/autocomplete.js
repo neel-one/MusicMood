@@ -1,3 +1,8 @@
+/*
+NOTE: FUNCTIONS IN THIS FILE NOT WRITTEN BY ME
+FULL CREDIT FOR THE AUTOCOMPLETE FEATURE COURTESY OF w3schools.com
+*/
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
