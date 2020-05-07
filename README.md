@@ -42,10 +42,10 @@ songs/
 Register an API key for Spotify and create 'auth.json'
 ```
 {
-  'username' : 
-  'id' : 
-  'secret' :
-  'redirect' : 
+  'username' :   placeholder,
+  'id' :  placeholder,
+  'secret' :   placeholder,
+  'redirect' :   placeholder,
 }
 ```
 
