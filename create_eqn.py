@@ -15,6 +15,7 @@ def ratio_distribution():
 
 # Naive equation
 # f(x,y,z) = z/x+1 + [(7.79 - log(Y+1)/7.79)*z - x]/x+1
+# May not be the best equation, but it satisfies all necessary constraints (i.e. min/max at the correct values)
 def EQ1(x, y, z):
     underrated_factor = (7.79 - math.log10(y+1))/7.79
     return z/(x + 1) + (underrated_factor * z -  x)/(x+1)
