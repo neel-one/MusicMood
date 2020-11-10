@@ -10,9 +10,10 @@ When I think of viable solutions, they seem to oppose the Problem Statement belo
 best solution needs some sort of personalization but not to the extent of removing the algorithm's ability to recommend
 a wider breadth of music. I am curious to see that applying  traditional personalized content methods to crowdsourced
 song lists could be effective.
+
 **TODOS (maybe)**
 * Create a way for users to like/dislike tracks
-* Use these insights to train custom  model (SVM, ensemble trees, neural nets? - talking to feed ranking employees, most companies are moving toward deep learning methods) - based on user preferences
+* Use these insights to train custom  model (SVM, ensemble trees, neural nets? - talking to content recommendaiton/feed ranking employees, companies are moving toward or already using deep learning methods) - based on user preferences
 * Rank songs based off each user's personal model 
 
 Final remarks: I've noticed that song data is highly unavailable and pricey, so it would be hard to train models on
