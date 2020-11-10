@@ -1,4 +1,24 @@
 # Mood-based Music Recommendations using crowdsourcing and ranking
+## REMARKS and TODOS (read this first!)
+
+I have noticed that the algorithm is ineffective for a few apparent but hard to solve reasons. First, let me express
+what I think is effective. I think how I query Spotify to generate song lists and the stochastic nature of how I
+implement crowdsourcing allows for a baseline for a list of "good" songs for each specific query. However, what I do
+afterwords (i.e. ranking) I feel is ineffective. I utilize Spotify's given metrics to determine the rankings of each
+song, which is more ineffective than it is effective as it is the problem I am trying to solve.
+When I think of viable solutions, they seem to oppose the Problem Statement below - in other words, I think that the
+best solution needs some sort of personalization but not to the extent of removing the algorithm's ability to recommend
+a wider breadth of music. I am curious to see that applying  traditional personalized content methods to crowdsourced
+song lists could be effective.
+**TODOS (maybe)**
+* Create a way for users to like/dislike tracks
+* Use these insights to train custom  model (SVM, ensemble trees, neural nets? - talking to feed ranking employees, most companies are moving toward deep learning methods) - based on user preferences
+* Rank songs based off each user's personal model 
+
+Final remarks: I've noticed that song data is highly unavailable and pricey, so it would be hard to train models on
+songs data; however, I think this method may work very well for more accessible entertainment media like memes or poems. 
+
+## Back to the regularly scheduled app
 
 **Table of Contents**
 1. App
